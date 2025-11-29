@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
+
+$first-color: #6AB74D;
+$second-color: #E9DD54;
+$third-color-1: #717EA3;
+$third-color-2: #48516a;
+$third-color-3: #333949;
+
+$font-color: #ded9eb;
+
+
+$basic-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$text: 20px;
+$text-wd: 400;
+
+
+
+body {
+    background: $third-color-2;
+    font-family: $basic-font;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    min-height: 90vh;
+}
+
+header {
+    // margin-top: 30px;
+    font-family: "Chango", sans-serif;
+    font-size: $text*5;
+    font-weight: $text-wd+300;
+    color: $second-color;
+}
+
+.setTime {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+
+    input {
+        width: 100px;
+        justify-self: center;
+        padding: 10px 10px;
+        border-radius: 50px;
+        background-color: $third-color-3;
+        border: none;
+        font-size: $text+5;
+        text-align: center;
+        color: $second-color;
+
+        &::placeholder {
+            color: rgba(245, 245, 245, 0.377);
+
+        }
+
+        &:focus {
+            outline: none;
+            color: $font-color;
+        }
+    }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.warning{
+    color: red;
+    margin-bottom: 10px;
+    grid-area: 2 / 1 / 3 / 3;
+    font-size: $text - 2;
+}
+
+.circle {
+    border: 2px solid $third-color-1;
+    height: 500px;
+    width: 500px;
+    border-radius: 100%;
+    // display: flex;
+    // flex-direction: column;
+    align-items: center;
+}
+
+.frame {
+    height: 300px;
+    width: 300px;
+    margin: auto;
+}
+
+.clockSet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // margin-bottom: 100px;
+    gap: 2em;
+}
+
+.clock {
+    font-family: $basic-font;
+    font-size: $text+20;
+    font-weight: $text-wd+600;
+    color: #6AB74D;
+}
+
+
+
+button {
+    height: 50px;
+    width: 50px;
+    border-radius: 60px;
+    padding: 15px;
+    background: $font-color;
+    border: none;
+    // transition: background-color 500ms ease-in, color 500ms ease-in;
+}
+
+footer {
+    font-size: $text;
+    color: $second-color;
+}
+
+.active {
+    background: #333949;
+    color: #ffffffff;
+    transition: background-color 0.5s ease-in, color 0.2s ease-in;
+}
+@media (max-width: 768px) {
+    $text-md: 16px; // Medium text size
+    
+    body{
+        justify-content: start;
+        gap: 2em;
+    }
+    
+    header {
+        font-size: $text-md * 4; // Approx 64px
+    }
+
+    .setTime {
+        grid-template-columns: repeat(2, 120px); // Shrink input containers
+        gap: 8px;
+        input {
+            width: 80px;
+            font-size: $text-md + 3; // Approx 19px
+        }
+    }
+
+    .warning {
+        font-size: $text-md - 2; // Approx 14px
+    }
+
+    .circle {
+        height: 400px; // Shrink circle
+        width: 400px;
+    }
+
+    .frame {
+        height: 240px; // Shrink frame
+        width: 240px;
+    }
+
+    .clock {
+        font-size: $text-md + 18; // Approx 34px
+    }
+
+    button {
+        height: 40px; // Shrink button
+        width: 40px;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: $text-md; // 16px
+    }
+}
+
+
+// --- Mobile devices (Max width 480px) ---
+@media (max-width: 480px) {
+    $text-sm: 14px; // Small text size
+
+    header {
+        font-size: $text-sm * 3; // Approx 42px
+        margin-top: 10px; // Adjust header margin
+    }
+
+    .setTime {
+        grid-template-columns: repeat(2, 100px); // Further shrink input containers
+        gap: 5px;
+
+        input {
+            width: 70px;
+            font-size: $text-sm + 3; // Approx 17px
+        }
+    }
+
+    .warning {
+        font-size: $text-sm - 1; // Approx 13px
+    }
+
+    .circle {
+        height: 300px; // Significant shrink for mobile
+        width: 300px;
+        border: 1px solid $third-color-1; // Thinner border on mobile
+    }
+
+    .frame {
+        height: 180px; // Significant shrink for mobile
+        width: 180px;
+    }
+
+    .clockSet {
+        gap: 1.5em; // Reduce gap
+    }
+
+    .clock {
+        font-size: $text-sm + 16; // Approx 30px
+    }
+
+    button {
+        height: 35px; // Further shrink button
+        width: 35px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: $text-sm; // 14px
+    }
+}

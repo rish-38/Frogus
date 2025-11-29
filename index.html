@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./scss/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.4/lottie.min.js"></script>
+</head>
+
+<body class="container">
+    <header>Frogus</header>
+    <section class="circle">
+        <div class="frame"></div>
+        <div class="clockSet">
+            <label class="clock">00 : 00</label>
+        <div class="timeBtn">
+            <button class="resetBtn"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            <button class="playBtn"><i class="fa-solid fa-play"></i></button>
+            <button class="stopBtn"><i class="fa-solid fa-pause"></i></button>
+        </div>
+    </section>
+    <div class="setTime">
+        <!-- <label class="focusText">Focus</label>
+        <label class="breakText">Break</label> -->
+        <input type="number" class="min" placeholder="min" min="0" max="60">
+        <input type="number" class="sec" placeholder="sec" min="0" max="60">   
+        <span class="warning"></span>
+    </div>
+    
+    <footer>created by &copy; rishikesh vishwakarma.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="./js/main.js"></script>
+</body>
+</html>
