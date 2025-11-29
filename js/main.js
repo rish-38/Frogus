@@ -76,7 +76,6 @@ let isClick = false;  //to check if the button is clicked or not
 
 //start button working
 play.addEventListener('click', () => {
-    console.log('play is clicked');
     setButtonActive(play);
     if (isClick === false) {
         startTimer();
@@ -84,13 +83,11 @@ play.addEventListener('click', () => {
 })
 //pause button working
 pause.addEventListener('click', () => {
-    console.log('play is clicked');
     setButtonActive(pause);
     pauseTimer();
 })
 //restrat button working
 restart.addEventListener('click', () => {
-    console.log('play is clicked');
     setButtonActive(restart);
     resetTimer();
 })
@@ -164,6 +161,7 @@ function resetTimer() {
     clock.innerHTML = formatTime(minVal, secVal);
     loadSVG(frogStudy);
 }
+
 
 
 
